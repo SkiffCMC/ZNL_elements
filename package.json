@@ -1,5 +1,5 @@
 {
-	"name": "lisk-elements-monorepo",
+	"name": "znl-elements-monorepo",
 	"private": true,
 	"version": "1.0.0",
 	"description": "Reusable packages for use with the Lisk ecosystem",
