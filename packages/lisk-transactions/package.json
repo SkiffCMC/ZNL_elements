@@ -1,5 +1,5 @@
 {
-	"name": "@liskhq/lisk-transactions",
+	"name": "@znlhq/znl-transactions",
 	"version": "1.1.2",
 	"description": "Everything related to transactions according to the Lisk protocol",
 	"author": "Lisk Foundation <admin@lisk.io>, lightcurve GmbH <admin@lightcurve.io>",
