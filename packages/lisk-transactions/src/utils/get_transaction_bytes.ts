@@ -12,7 +12,7 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
-import * as cryptography from '@liskhq/lisk-cryptography';
+import * as cryptography from '@znlhq/znl-cryptography';
 import BigNum from 'browserify-bignum';
 import { BYTESIZES, MAX_TRANSACTION_AMOUNT } from '../constants';
 import {
