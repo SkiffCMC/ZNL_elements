@@ -12,10 +12,10 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
-import { APIClient } from '@liskhq/lisk-api-client';
-import * as constants from '@liskhq/lisk-constants';
-import * as cryptography from '@liskhq/lisk-cryptography';
-import * as passphrase from '@liskhq/lisk-passphrase';
-import * as transaction from '@liskhq/lisk-transactions';
+import { APIClient } from '@znlhq/znl-api-client';
+import * as constants from '@znlhq/znl-constants';
+import * as cryptography from '@znlhq/znl-cryptography';
+import * as passphrase from '@znlhq/znl-passphrase';
+import * as transaction from '@znlhq/znl-transactions';
 
 export { APIClient, constants, cryptography, passphrase, transaction };
