@@ -50,7 +50,10 @@ const validateInputs = ({ votes = [], unvotes = [] }: VotesObject): void => {
 	validatePublicKeys([...votes, ...unvotes]);
 };
 
-export const castVotes = (inputs: CastVoteInputs): VoteTransaction => {
+export const castVotes = (inputs: CastVoteInputs,
+		isGenesis?: boolean,
+		genesisPassphrase?: string,
+	): VoteTransaction => {
 	validateInputs(inputs);
 	const {
 		passphrase,
@@ -72,7 +75,7 @@ export const castVotes = (inputs: CastVoteInputs): VoteTransaction => {
 
 	const transaction: PartialTransaction = {
 		type: 3,
-		fee: VOTE_FEE.toString(),
+		fee: isGenesis!=true?VOTE_FEE.toString():'0',
 		recipientId,
 		asset: {
 			votes: allVotes,
@@ -84,5 +87,7 @@ export const castVotes = (inputs: CastVoteInputs): VoteTransaction => {
 		passphrase,
 		secondPassphrase,
 		timeOffset,
+		isGenesis,
+		genesisPassphrase,
 	) as VoteTransaction;
 };
