@@ -69,12 +69,9 @@ export const prepareTransaction = (
 	if (!passphrase && !genesisPassphrase) {
 		return transaction;
 	}
-	let definedGenesisPassphrase:string;
-	definedGenesisPassphrase = genesisPassphrase;
-	if (definedGenesisPassphrase==undefined) definedGenesisPassphrase = '';
 	const singleSignedTransaction = {
 		...transaction,
-		signature: !genesisPassphrase?signTransaction(transaction, passphrase):signTransaction(transaction, ''+definedGenesisPassphrase),
+		signature: !genesisPassphrase?signTransaction(transaction, !passphrase?'':passphrase):signTransaction(transaction, !genesisPassphrase?'':genesisPassphrase),
 	};
 
 	const signedTransaction =
