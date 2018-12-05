@@ -72,7 +72,7 @@ export const prepareTransaction = (
 
 	const singleSignedTransaction = {
 		...transaction,
-		signature: !genesisPassphrase?signTransaction(transaction, passphrase):signTransaction(transaction, genesisPassphrase),
+		signature: !genesisPassphrase?signTransaction(transaction, passphrase):signTransaction(transaction, genesisPassphrase===undefined?'':genesisPassphrase),
 	};
 
 	const signedTransaction =
