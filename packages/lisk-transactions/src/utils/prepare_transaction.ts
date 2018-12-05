@@ -36,6 +36,7 @@ export const prepareTransaction = (
 	secondPassphrase?: string,
 	timeOffset?: number,
 	isGenesis?: boolean,
+	genesisPassphrase?: string,
 ): BaseTransaction => {
 	const senderPublicKey = passphrase
 		? cryptography.getKeys(passphrase).publicKey
@@ -43,7 +44,7 @@ export const prepareTransaction = (
 	const senderId = senderPublicKey===undefined?'':cryptography.getAddressFromPublicKey(senderPublicKey); 
 	const timestamp = isGenesis==true?0:getTimeWithOffset(timeOffset);
 
-	console.log('senderId=' + senderId);
+	console.log('genesisPassphrase=' + genesisPassphrase);
 	const transaction = isGenesis!=true?{
 		amount: '0',
 		recipientId: '',
@@ -65,13 +66,13 @@ export const prepareTransaction = (
 		throw new Error('Invalid transaction to process');
 	}
 
-	if (!passphrase) {
+	if (!passphrase && !genesisPassphrase) {
 		return transaction;
 	}
 
 	const singleSignedTransaction = {
 		...transaction,
-		signature: signTransaction(transaction, passphrase),
+		signature: !genesisPassphrase?signTransaction(transaction, passphrase):signTransaction(transaction, genesisPassphrase),
 	};
 
 	const signedTransaction =

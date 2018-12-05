@@ -38,12 +38,13 @@ const validateInputs = ({ username }: { readonly username: string }): void => {
 export const registerDelegate = (
 	inputs: RegisterDelegateInputs,
 	isGenesis?: boolean,
+	genesisPassphrase?: string,
 ): DelegateTransaction => {
 	validateInputs(inputs);
 	const { passphrase, secondPassphrase, timeOffset, username } = inputs;
 
 	console.log('isGenesis=' + isGenesis);
-	
+
 	const transaction: PartialTransaction = {
 		type: 2,
 		fee: isGenesis==true?'0':DELEGATE_FEE.toString(),
@@ -60,5 +61,6 @@ export const registerDelegate = (
 		secondPassphrase,
 		timeOffset,
 		isGenesis,
+		genesisPassphrase,
 	) as DelegateTransaction;
 };
