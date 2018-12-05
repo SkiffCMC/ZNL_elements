@@ -37,13 +37,14 @@ const validateInputs = ({ username }: { readonly username: string }): void => {
 
 export const registerDelegate = (
 	inputs: RegisterDelegateInputs,
+	isGenesis?: boolean,
 ): DelegateTransaction => {
 	validateInputs(inputs);
 	const { passphrase, secondPassphrase, timeOffset, username } = inputs;
 
 	const transaction: PartialTransaction = {
 		type: 2,
-		fee: DELEGATE_FEE.toString(),
+		fee: isGenesis==true?'0':DELEGATE_FEE.toString(),
 		asset: {
 			delegate: {
 				username,
@@ -56,5 +57,6 @@ export const registerDelegate = (
 		passphrase,
 		secondPassphrase,
 		timeOffset,
+		isGenesis,
 	) as DelegateTransaction;
 };

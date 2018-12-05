@@ -35,11 +35,12 @@ export const prepareTransaction = (
 	passphrase?: string,
 	secondPassphrase?: string,
 	timeOffset?: number,
+	isGenesis?: boolean,
 ): BaseTransaction => {
 	const senderPublicKey = passphrase
 		? cryptography.getKeys(passphrase).publicKey
 		: undefined;
-	const timestamp = getTimeWithOffset(timeOffset);
+	const timestamp = isGenesis==true?0:getTimeWithOffset(timeOffset);
 
 	const transaction = {
 		amount: '0',
