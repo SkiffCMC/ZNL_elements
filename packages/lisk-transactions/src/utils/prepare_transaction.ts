@@ -44,7 +44,7 @@ export const prepareTransaction = (
 	const timestamp = isGenesis==true?0:getTimeWithOffset(timeOffset);
 
 	console.log('senderId=' + senderId);
-	const transaction = isGenesis==true?{
+	const transaction = isGenesis!=true?{
 		amount: '0',
 		recipientId: '',
 		senderPublicKey,
