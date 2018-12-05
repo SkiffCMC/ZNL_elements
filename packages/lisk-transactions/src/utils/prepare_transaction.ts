@@ -40,11 +40,21 @@ export const prepareTransaction = (
 	const senderPublicKey = passphrase
 		? cryptography.getKeys(passphrase).publicKey
 		: undefined;
+	const senderId = cryptography.getAddressFromPublicKey(senderPublicKey); 
 	const timestamp = isGenesis==true?0:getTimeWithOffset(timeOffset);
 
-	const transaction = {
+	const transaction = isGenesis==true?{
 		amount: '0',
 		recipientId: '',
+		senderPublicKey,
+		timestamp,
+		...partialTransaction,
+	}
+	:
+	{
+		amount: '0',
+		recipientId: '',
+		senderId,
 		senderPublicKey,
 		timestamp,
 		...partialTransaction,
