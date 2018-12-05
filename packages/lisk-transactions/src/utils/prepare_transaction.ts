@@ -54,7 +54,7 @@ export const prepareTransaction = (
 	:
 	{
 		amount: '0',
-		recipientId: '',
+		recipientId: null,
 		senderId,
 		senderPublicKey,
 		timestamp,
