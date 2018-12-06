@@ -121,7 +121,7 @@ export const transfer = (inputs: TransferInputs,
 	{
 		type: 0,
 		amount: amount.toString(),
-		fee: 0,
+		fee: '0',
 		recipientId,
 		asset: createAsset(data),
 	};
