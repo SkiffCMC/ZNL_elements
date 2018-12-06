@@ -88,7 +88,10 @@ const validateInputs = ({
 	}
 };
 
-export const transfer = (inputs: TransferInputs): TransferTransaction => {
+export const transfer = (inputs: TransferInputs, 
+	isGenesis?: boolean,
+	genesisPassphrase?: string,
+): TransferTransaction => {
 	validateInputs(inputs);
 	const {
 		data,
@@ -109,7 +112,7 @@ export const transfer = (inputs: TransferInputs): TransferTransaction => {
 	const transaction: PartialTransaction = {
 		type: 0,
 		amount: amount.toString(),
-		fee: TRANSFER_FEE.toString(),
+		fee: isGenesis==true?'0':TRANSFER_FEE.toString(),
 		recipientId,
 		recipientPublicKey,
 		asset: createAsset(data),
@@ -120,5 +123,7 @@ export const transfer = (inputs: TransferInputs): TransferTransaction => {
 		passphrase,
 		secondPassphrase,
 		timeOffset,
+		isGenesis,
+		genesisPassphrase,
 	) as TransferTransaction;
 };
