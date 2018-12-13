@@ -71,7 +71,7 @@ export const createDapp = (inputs: DappInputs): DappTransaction => {
 
 	const transaction: PartialTransaction = {
 		type: 5,
-		fee: DAPP_FEE.toString(),
+		fee: DAPP_FEE,
 		asset: {
 			dapp: {
 				category: options.category,

@@ -45,7 +45,7 @@ export const registerSecondPassphrase = (
 
 	const transaction: PartialTransaction = {
 		type: 1,
-		fee: SIGNATURE_FEE.toString(),
+		fee: SIGNATURE_FEE,
 		asset: {
 			signature: {
 				publicKey,

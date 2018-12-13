@@ -93,7 +93,7 @@ export const registerMultisignature = (
 
 	const transaction: PartialTransaction = {
 		type: 4,
-		fee: (MULTISIGNATURE_FEE * keygroupFees).toString(),
+		fee: (MULTISIGNATURE_FEE * keygroupFees),
 		asset: {
 			multisignature: {
 				min: minimum,
