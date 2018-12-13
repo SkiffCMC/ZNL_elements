@@ -13,7 +13,7 @@
  *
  */
 export interface BaseTransaction {
-	readonly amount: string;
+	readonly amount: number;
 	readonly asset: TransactionAsset;
 	readonly fee: string;
 	readonly id?: string;

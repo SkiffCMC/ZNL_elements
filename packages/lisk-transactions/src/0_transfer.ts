@@ -111,7 +111,7 @@ export const transfer = (inputs: TransferInputs,
 
 	const transaction: PartialTransaction = isGenesis!=true?{
 		type: 0,
-		amount: amount.toString(),
+		amount: amount,
 		fee: TRANSFER_FEE.toString(),
 		recipientId,
 		recipientPublicKey,
@@ -120,7 +120,7 @@ export const transfer = (inputs: TransferInputs,
 	:
 	{
 		type: 0,
-		amount: amount.toString(),
+		amount: amount,
 		fee: '0',
 		recipientId,
 		asset: createAsset(data),
