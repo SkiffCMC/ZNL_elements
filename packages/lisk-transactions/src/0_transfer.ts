@@ -23,7 +23,7 @@ import {
 	prepareTransaction,
 	validateAddress,
 	validatePublicKey,
-	validateTransferAmount,
+	//validateTransferAmount,
 } from './utils';
 
 const createAsset = (data?: string): TransferAsset => {
@@ -45,7 +45,7 @@ export interface TransferInputs {
 }
 
 const validateInputs = ({
-	amount,
+	//amount,
 	recipientId,
 	recipientPublicKey,
 	data,
