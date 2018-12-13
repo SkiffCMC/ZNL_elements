@@ -50,9 +50,9 @@ const validateInputs = ({
 	recipientPublicKey,
 	data,
 }: TransferInputs): void => {
-	if (!validateTransferAmount(amount)) {
-		throw new Error('Amount must be a valid number in string format.');
-	}
+	//if (!validateTransferAmount(amount)) {
+	//	throw new Error('Amount must be a valid number in string format.');
+	//}
 
 	if (!recipientId && !recipientPublicKey) {
 		throw new Error(
