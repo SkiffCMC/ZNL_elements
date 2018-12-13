@@ -46,7 +46,7 @@ export const prepareTransaction = (
 
 	console.log('genesisPassphrase=' + genesisPassphrase);
 	const transaction = isGenesis!=true?{
-		amount: '0',
+		amount: 0,
 		recipientId: '',
 		senderPublicKey,
 		timestamp,
@@ -54,7 +54,7 @@ export const prepareTransaction = (
 	}
 	:
 	{
-		amount: '0',
+		amount: 0,
 		recipientId: null,
 		senderId,
 		senderPublicKey,
