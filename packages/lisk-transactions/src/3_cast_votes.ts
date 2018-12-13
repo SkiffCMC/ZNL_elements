@@ -75,7 +75,7 @@ export const castVotes = (inputs: CastVoteInputs,
 
 	const transaction: PartialTransaction = {
 		type: 3,
-		fee: isGenesis!=true?VOTE_FEE:0,
+		fee: isGenesis!=true?VOTE_FEE.toString():'0',
 		recipientId,
 		asset: {
 			votes: allVotes,
