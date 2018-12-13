@@ -15,7 +15,7 @@
 export interface BaseTransaction {
 	readonly amount: number;
 	readonly asset: TransactionAsset;
-	readonly fee: string;
+	readonly fee: number;
 	readonly id?: string;
 	readonly recipientId: string | null;
 	readonly recipientPublicKey?: string | null;

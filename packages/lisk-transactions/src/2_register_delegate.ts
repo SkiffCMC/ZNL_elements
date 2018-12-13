@@ -47,7 +47,7 @@ export const registerDelegate = (
 
 	const transaction: PartialTransaction = {
 		type: 2,
-		fee: isGenesis==true?'0':DELEGATE_FEE.toString(),
+		fee: isGenesis==true?0:DELEGATE_FEE,
 		asset: {
 			delegate: {
 				username,
