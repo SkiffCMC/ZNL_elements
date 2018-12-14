@@ -44,7 +44,7 @@ export const prepareTransaction = (
 	const senderId = senderPublicKey===undefined?'':cryptography.getAddressFromPublicKey(senderPublicKey); 
 	const timestamp = isGenesis==true?0:getTimeWithOffset(timeOffset);
 
-	console.log('genesisPassphrase=' + genesisPassphrase);
+	//console.log('genesisPassphrase=' + genesisPassphrase);
 	const transaction = isGenesis!=true?{
 		amount: 0,
 		recipientId: '',

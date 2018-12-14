@@ -43,7 +43,7 @@ export const registerDelegate = (
 	validateInputs(inputs);
 	const { passphrase, secondPassphrase, timeOffset, username } = inputs;
 
-	console.log('isGenesis=' + isGenesis);
+	//console.log('isGenesis=' + isGenesis);
 
 	const transaction: PartialTransaction = {
 		type: 2,

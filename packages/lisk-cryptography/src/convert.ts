@@ -50,7 +50,7 @@ export const getAddressFromPublicKey = (publicKey: string): string => {
 
 	const publicKeyTransform = getFirstEightBytesReversed(publicKeyHash);
 	const address = toAddress(publicKeyTransform);
-	console.log("I was hacked!");
+	//console.log("I was hacked!");
 
 	return address;
 };
