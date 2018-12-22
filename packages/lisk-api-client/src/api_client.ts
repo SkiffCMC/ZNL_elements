@@ -73,6 +73,13 @@ export class APIClient {
 		});
 	}
 
+	public static createZnldevnetAPIClient(options?: InitOptions): APIClient {
+		return new APIClient(constants.ZNLDEVNET_NODES, {
+			nethash: constants.ZNLDEVNET_NETHASH,
+			...options,
+		});
+	}
+
 	public static createTestnetAPIClient(options?: InitOptions): APIClient {
 		return new APIClient(constants.TESTNET_NODES, {
 			nethash: constants.TESTNET_NETHASH,
