@@ -27,7 +27,7 @@ export const TESTNET_NODES: ReadonlyArray<string> = [
 	'https://testnet.lisk.io:443',
 ];
 export const ZNLDEVNET_NODES: ReadonlyArray<string> = [
-	'http://localhost:4000',
+	'http://localhost:5000',
 ];
 
 export const MAINNET_NODES: ReadonlyArray<string> = [
