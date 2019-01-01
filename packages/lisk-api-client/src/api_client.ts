@@ -75,6 +75,7 @@ export class APIClient {
 	}
 
 	public static createZnldevnetAPIClient(options?: InitOptions): APIClient {
+		console.log('In znldevnet creation');
 		return new APIClient(constants.ZNLDEVNET_NODES, {
 			nethash: constants.ZNLDEVNET_NETHASH,
 			...options,
@@ -82,6 +83,7 @@ export class APIClient {
 	}
 
 	public static createTestnetAPIClient(options?: InitOptions): APIClient {
+		console.log('In testnet creation');
 		return new APIClient(constants.TESTNET_NODES, {
 			nethash: constants.TESTNET_NETHASH,
 			...options,
@@ -105,6 +107,7 @@ export class APIClient {
 	public votes: VotesResource;
 
 	public constructor(
+		console.log('In APIClient constructor');
 		nodes: ReadonlyArray<string>,
 		providedOptions: InitOptions = {},
 	) {
