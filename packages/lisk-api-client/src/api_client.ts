@@ -67,6 +67,7 @@ export class APIClient {
 	}
 
 	public static createMainnetAPIClient(options?: InitOptions): APIClient {
+		console.log('In mainnet creation');
 		return new APIClient(constants.MAINNET_NODES, {
 			nethash: constants.MAINNET_NETHASH,
 			...options,
@@ -107,6 +108,7 @@ export class APIClient {
 		nodes: ReadonlyArray<string>,
 		providedOptions: InitOptions = {},
 	) {
+		console.log('Options were: '+providedOptions);
 		this.initialize(nodes, providedOptions);
 		this.accounts = new AccountsResource(this);
 		this.blocks = new BlocksResource(this);
