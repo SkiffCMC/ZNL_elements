@@ -59,11 +59,11 @@
 		"prepublishOnly": "npm run lint && npm test && npm run build && npm run build:check"
 	},
 	"dependencies": {
-		"@znlhq/znl-api-client": "../packages/lisk-api-client/znlhq-znl-api-client-1.1.2.tgz",
-		"@znlhq/znl-constants": "../packages/lisk-api-client/znlhq-znl-constants-1.1.2.tgz",
-		"@znlhq/znl-cryptography": "../packages/lisk-api-client/znlhq-znl-cryptography-1.1.2.tgz",
-		"@znlhq/znl-passphrase": "../packages/lisk-api-client/znlhq-znl-passphrase-1.1.2.tgz",
-		"@znlhq/znl-transactions": "../packages/lisk-api-client/znlhq-znl-transactions-1.1.2.tgz"
+		"@znlhq/znl-api-client": "../../lisk-api-client/znlhq-znl-api-client-1.1.2.tgz",
+		"@znlhq/znl-constants": "../../lisk-api-client/znlhq-znl-constants-1.1.2.tgz",
+		"@znlhq/znl-cryptography": "../../lisk-api-client/znlhq-znl-cryptography-1.1.2.tgz",
+		"@znlhq/znl-passphrase": "../../lisk-api-client/znlhq-znl-passphrase-1.1.2.tgz",
+		"@znlhq/znl-transactions": "../../lisk-api-client/znlhq-znl-transactions-1.1.2.tgz"
 	},
 	"devDependencies": {
 		"@types/chai": "4.1.5",
