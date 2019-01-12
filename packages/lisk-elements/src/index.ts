@@ -18,4 +18,4 @@ import * as cryptography from '@znlhq/znl-cryptography';
 import * as passphrase from '@znlhq/znl-passphrase';
 import * as transaction from '@znlhq/znl-transactions';
 
-export { APIClient, constants, cryptography, passphrase, transaction };
+export { APIClient, constants, cryptography, passphrase, transaction } as Znl;
